@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from prometheus_client import start_http_server, Gauge
 from sqlalchemy import create_engine
 from db import engine
 
