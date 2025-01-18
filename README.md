@@ -99,6 +99,31 @@ Monitoring is set up using Prometheus and Grafana:
 • Prometheus collects metrics from your application and stores them.
 • Grafana provides a dashboard to visualize the metrics.
 
+### Configuring Prometheus to collect metrics
+**Prometheus installation using Helm:**
+```
+helm install prometheus prometheus-community/kube-prometheus-stack --namespace monitoring --create-namespace
+```
+**Checking if Prometheus works:**
+Make sure all Prometheus components are running:
+```
+kubectl get pods -n monitoring
+```
+
+**Access to Prometheus:**
+
+To access the Prometheus interface through a browser, use port-forwarding:
+```
+kubectl port-forward -n monitoring svc/prometheus-kube-prometheus-prometheus 9090:9090
+```
+For grafana we doing same steps of instalation and port-forwarding:
+```
+helm install grafana prometheus-community/grafana --namespace monitoring
+kubectl get pods -n monitoring
+kubectl port-forward -n monitoring svc/grafana 3000:80
+```
+Now you can go to http://localhost:3000 to get into Grafana.
+
 **Apply Prometheus resources:**
 ```
 kubectl apply -f /path/to/k8s/monitoring/prometheus/prometheus-deployment.yaml
