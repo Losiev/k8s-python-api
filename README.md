@@ -14,7 +14,26 @@ Install the required Python dependencies by running:
 ```bash
 pip install -r requirements.txt
 ```
-
+### Directory Structure
+```
+k8s-python-api/
+│
+├── app/                 
+│   ├── main.py          
+│   └── db.py             
+├── k8s/                  
+│   ├── postgres/        
+│   ├── monitoring/       
+│   ├── deployment.yaml   
+│   ├── service.yaml      
+│   ├── hpa.yaml         
+│   ├── ingress.yaml      
+│   ├── secret.yaml      
+│   └── configmap.yaml  
+├── Dockerfile            
+├── requirements.txt     
+└── README.md            
+```
 ## Getting Started
 
 ### Step 1: Creating a cluster via kind
