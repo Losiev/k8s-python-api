@@ -1,4 +1,5 @@
 fastapi==0.95.2
 flask==2.2.2
 uvicorn==0.18.2
+sqlalchemy==2.0.15
 prometheus_client==0.14.1
