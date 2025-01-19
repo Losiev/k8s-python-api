@@ -98,8 +98,8 @@ docker build -t k8s-python-app .
 docker run -p 8000:8000 k8s-python-app
 ```
 ### Monitoring
-Monitoring is set up using Prometheus and Grafana:
-• Prometheus collects metrics from your application and stores them.
+Monitoring is set up using Prometheus and Grafana:<br/>
+• Prometheus collects metrics from your application and stores them.<br/>
 • Grafana provides a dashboard to visualize the metrics.
 
 ### Configuring Prometheus to collect metrics
